@@ -7,6 +7,6 @@ class MyApplication() : Application() {
         super.onCreate()
 
         // Kakao SDK 초기화
-        KakaoSdk.init(this, "c6af6f6b7cc180956afa6ef8188c931e")
+        KakaoSdk.init(this, "46d9f78dd50186c6c666f893e65a737b")
     }
 }

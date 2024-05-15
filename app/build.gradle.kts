@@ -36,21 +36,23 @@ android {
     }
     buildFeatures {
         viewBinding = true
-        dataBinding = true
     }
 }
 
 dependencies {
-    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
-    implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-database-ktx")
-    implementation ("com.google.firebase:firebase-auth-ktx")
-    implementation ("com.kakao.sdk:v2-user:2.12.1") // 카카오 로그인
+    implementation ("com.kakao.sdk:v2-user:2.20.1") // 카카오 로그인
+    implementation (platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation ("com.google.firebase:firebase-database-ktx") // Realtime Database library
+    implementation ("com.google.firebase:firebase-core:21.1.1")
+    implementation ("com.firebaseui:firebase-ui-auth:7.2.0") // gradle_firebase_ui_auth
+    implementation ("com.google.android.gms:play-services-auth:21.1.1") // Google Play services library
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
